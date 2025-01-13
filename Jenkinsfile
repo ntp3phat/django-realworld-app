@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('build image') {
+      steps {
+        sh 'sh \'docker build -t realworld-python:1.0 .\''
+      }
+    }
+
   }
 }
